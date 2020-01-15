@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  
+</div>
+<h2>Messages: </h2>
+<hr/>
+
+<p *ngFor="let curMessage of messages">
+  {{curMessage}}
+  {{curMessage.sender}} says: {{curMessage.message}}
+  
+</p>
+
+
+<h2>New messages </h2>
+<hr/>
+<form #messageForm="ngForm" (ngSubmit)="onSubmit(messageForm)">
+  <label>
+    Your Name!
+    <input type="text" [(ngModel)]="name" name="name">
+  </label>
+  <label>
+    Message:
+    <input type="text" [(ngModel)]="message" name="message">
+  </label>
+  <button type="submit" >Send</button>
+</form>
+<router-outlet></router-outlet>
