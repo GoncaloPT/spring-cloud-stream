@@ -5,7 +5,6 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import pt.goncalo.poc.streamapi.model.ChatMessage;
-import pt.goncalo.poc.streamapi.service.ChatService;
 import pt.goncalo.poc.streamapi.service.IChatService;
 import reactor.core.publisher.Flux;
 

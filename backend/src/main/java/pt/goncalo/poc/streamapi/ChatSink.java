@@ -1,7 +1,6 @@
 package pt.goncalo.poc.streamapi;
 
 import lombok.extern.log4j.Log4j2;
-import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.messaging.SubscribableChannel;

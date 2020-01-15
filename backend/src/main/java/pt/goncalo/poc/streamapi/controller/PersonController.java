@@ -1,5 +1,4 @@
 package pt.goncalo.poc.streamapi.controller;
-
 import lombok.AllArgsConstructor;
 import org.reactivestreams.Publisher;
 import org.springframework.web.bind.annotation.GetMapping;

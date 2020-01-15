@@ -10,8 +10,7 @@ backend/spring-boot:run
 ng serve  
 
 ## to run coackroach (on docker)
-<imageid = docker image ls  
-docker container run -p 26257:26257 -p 18080:8080 <imageid> start --insecure  
+docker container run -p 26257:26257 -p 18080:8080 -d cockroachdb/cockroach:v19.2.1 start --insecure  
 
 ## run RabbitMQ ( on docker)
 docker run -d -p 15672:15672 -p 5672:5672 -p 5671:5671 --hostname my-rabbitmq --name my-rabbitmq-container  rabbitmq:3-management

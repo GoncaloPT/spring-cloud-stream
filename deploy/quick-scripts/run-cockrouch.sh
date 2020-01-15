@@ -1,0 +1,1 @@
+docker container run -p 26257:26257 -p 18080:8080 cockroachdb/cockroach:v19.2.1 start --insecure  

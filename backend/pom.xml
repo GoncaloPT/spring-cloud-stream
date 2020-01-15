@@ -36,7 +36,7 @@
             <artifactId>spring-cloud-stream</artifactId>
         </dependency>
         <!-- RabbitMQ -->
-        <!--
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
@@ -45,7 +45,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-stream-binder-rabbit</artifactId>
         </dependency>
-        -->
+        
         <!-- Kafka -->
 
         <!--
@@ -60,11 +60,13 @@
         -->
 
         <!-- Service BUS -->
+        <!--
         <dependency>
             <groupId>com.microsoft.azure</groupId>
             <artifactId>spring-cloud-azure-servicebus-topic-stream-binder</artifactId>
             <version>1.1.0.RC5</version>
         </dependency>
+        -->
         <!-- r2dbc -->
         <dependency>
             <groupId>io.r2dbc</groupId>
