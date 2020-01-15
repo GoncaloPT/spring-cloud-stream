@@ -6,9 +6,7 @@ import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.cloud.stream.messaging.Source;
-import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.support.MessageBuilder;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import pt.goncalo.poc.streamapi.model.ChatMessage;
 import pt.goncalo.poc.streamapi.repository.ChatRepository;
@@ -54,7 +52,6 @@ public class DatabaseChatService implements IChatService {
     public ChatMessage publishMessage(String personId, String message) {
         ChatMessage c = new ChatMessage(null, personId, message, new Date());
         repository.save(c)
-                //.doOnSuccess(chatMessage -> eventPublisher.onNext(chatMessage))
                 .doOnSuccess(cm -> log.warn("Message published saved in database"))
                 .doOnError(ex -> log.warn("error saving message in database: {0}", ex) )
                 .doOnSuccess(chatMessage -> source.output().send(MessageBuilder.withPayload(chatMessage).build()))

@@ -1,5 +1,7 @@
 # spring-cloud-stream
 Poc to show how to use spring reactive web with cockroach db in a chat application
+## Diagram
+![Screenshot](diagram.png)
 
 ## to run backend
 backend/spring-boot:run
