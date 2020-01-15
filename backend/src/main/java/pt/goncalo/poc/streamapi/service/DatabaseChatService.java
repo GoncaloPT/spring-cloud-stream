@@ -30,7 +30,7 @@ public class DatabaseChatService implements IChatService {
 
     @StreamListener(Sink.INPUT)
     public void onChatMessage(ChatMessage chatMessage) {
-        log.warn("!!!!!!!!!!!!!!!!Message received %s", chatMessage);
+        log.warn("Message received {0}", chatMessage);
         eventPublisher.onNext(chatMessage);
     }
 

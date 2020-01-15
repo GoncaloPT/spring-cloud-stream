@@ -48,7 +48,7 @@
         -->
         <!-- Kafka -->
 
-        
+        <!--
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-stream-binder-kafka</artifactId>
@@ -57,7 +57,14 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
         </dependency>
-        
+        -->
+
+        <!-- Service BUS -->
+        <dependency>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>spring-cloud-azure-servicebus-topic-stream-binder</artifactId>
+            <version>1.1.0.RC5</version>
+        </dependency>
         <!-- r2dbc -->
         <dependency>
             <groupId>io.r2dbc</groupId>

@@ -18,6 +18,9 @@ docker run -d -p 15672:15672 -p 5672:5672 -p 5671:5671 --hostname my-rabbitmq --
 
 ## run Kafka
 ### if needed
+this will be harder due to the way kafka cluster is set up. spring app needs to be ran in the same network...  
+not so good for localhost tryouts
+
 docker swarm init
 (needed ? ) docker network create -d overlay --attachable kafka-net
 /spring-cloud-stream/deploy/kafka# docker stack deploy --compose-file=docker-compose.yml kafka
