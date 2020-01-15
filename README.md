@@ -6,15 +6,22 @@ Poc to show how to use spring reactive web with cockroach db in a chat applicati
 ## to run backend
 backend/spring-boot:run
 ## to run frontend
-(once) npm install
-ng serve
+(once) npm install  
+ng serve  
 
 ## to run coackroach (on docker)
-<imageid> = docker image ls 
-docker container run -p 26257:26257 -p 18080:8080 <imageid> start --insecure
+<imageid = docker image ls  
+docker container run -p 26257:26257 -p 18080:8080 <imageid> start --insecure  
 
 ## run RabbitMQ ( on docker)
-docker run -d -p 15672:15672 -p 5672:5672 -p 5671:5671 --hostname my-rabbitmq --name my-rabbitmq-container rabbitmq:3-management
+docker run -d -p 15672:15672 -p 5672:5672 -p 5671:5671 --hostname my-rabbitmq --name my-rabbitmq-container  rabbitmq:3-management
+
+## run Kafka
+### if needed
+docker swarm init
+(needed ? ) docker network create -d overlay --attachable kafka-net
+/spring-cloud-stream/deploy/kafka# docker stack deploy --compose-file=docker-compose.yml kafka
+
 
 #### Management endpoint
 http://localhost:15672/
